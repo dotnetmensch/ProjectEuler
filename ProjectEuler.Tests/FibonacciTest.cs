@@ -1,13 +1,16 @@
 using System;
+using ProjectEuler.Service;
 using Xunit;
 
 namespace ProjectEuler.Tests
 {
-    public class UnitTest1
+    public class FibonacciTest
     {
         [Fact]
-        public void Test1()
+        public void GetEvenFibSumBaseTest()
         {
+            var sumOf89 = new Fibonacci().GetSumOfEvenFib(89);
+            Assert.Equal(44, sumOf89);
         }
     }
 }

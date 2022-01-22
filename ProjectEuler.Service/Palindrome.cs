@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ServiceLibrary
+namespace ProjectEuler.Service
 {
-    public static class Palindrome
+    public class Palindrome
     {
-        public static long LargestPalindromicOfTwo(int digits)
+        public long LargestPalindromicOfTwo(int digits)
         {
             string startString = string.Empty;
             var endString = string.Empty;
@@ -31,7 +28,7 @@ namespace ServiceLibrary
                 for (long j = start1; j >= end; j--)
                 {
                     result = i * j;
-                    if (result.IsPalindromic())
+                    if (IsPalindromic(result))
                         palindromes.Add(result);
                 }
             }
@@ -41,7 +38,7 @@ namespace ServiceLibrary
         }
 
 
-        private static bool IsPalindromic(this long number)
+        private bool IsPalindromic(long number)
         {
             var charArray = number.ToString().ToCharArray();
             var reverseCharArray = charArray.Reverse().ToArray();

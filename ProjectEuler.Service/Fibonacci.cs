@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ServiceLibrary
+﻿namespace ProjectEuler.Service
 {
-    public static class Fibonacci
+    public class Fibonacci
     {
-        public static long GetSumOfEvenFib(long upperBound)
+        public long GetSumOfEvenFib(long upperBound)
         {
             var result = 0;
             var a = 1;

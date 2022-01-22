@@ -1,26 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ServiceLibrary
+﻿namespace ProjectEuler.Service
 {
-    public static class SmallestMultiple
+    public class SmallestMultiple
     {
-        public static long GetSmallestMultiple(int start, int end)
+        public long GetSmallestMultiple(int start, int end)
         {
-            long result = 0;
-            bool success = true;
+            long result = end - 1;
+            int remainder;
             do
             {
                 result++;
+                remainder = 0;
                 for (int i = start; i <= end; i++)
                 {
-                    if (result % i != 0)
-                        success = false;
+                    remainder = (int)(result % i);
+                    if(remainder != 0)
+                        break;
                 }
-            } while (!success);
+            } while (remainder != 0);
 
             return result;
         }

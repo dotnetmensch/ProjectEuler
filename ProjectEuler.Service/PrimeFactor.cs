@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ServiceLibrary
+﻿namespace ProjectEuler.Service
 {
-    public static class PrimeFactor
+    public class PrimeFactor
     {
-        public static long GetLargestPrimeFactor(long number)
+        public long GetLargestPrimeFactor(long number)
         {
             long factor = 2;
             while (factor * factor <= number)

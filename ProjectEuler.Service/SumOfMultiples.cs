@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ServiceLibrary
+﻿namespace ProjectEuler.Service
 {
-    public static class SumOfMultiples
+    public class SumOfMultiples
     {
-        public static long GetSumOfMultiplesOf3And5(long upperbound)
+        public long GetSumOfMultiplesOf3And5(long upperbound)
         {
             long result = 0;
             for (long i = 0; i < upperbound; i++)
